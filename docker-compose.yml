@@ -1,0 +1,14 @@
+version: "3.7"
+
+########################### SERVICES
+services:
+  cfdns:
+    image: ghcr.io/oomathurman/cfDns
+    container_name: cfDns
+    restart: unless-stopped
+    environment:
+      - domainName=
+      - dnsRecords="*", ""
+      - apiEmail=
+      - apiKey=
+      - timer=*/5 * * * *
