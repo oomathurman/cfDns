@@ -6,6 +6,10 @@ dnsRecords = os.environ['dnsRecords']
 apiEmail = os.environ['apiEmail']
 apiKey = os.environ['apiKey']
 
+try:
+    dnsRecords.split(',')
+except:
+    pass
 
 cfURL = "https://api.cloudflare.com/client/v4/zones"
 authHeaders = {
@@ -81,6 +85,8 @@ def main():
     print(f'Domain Zone Id : {zoneId}')
     # You probly want to find the correct record now
     for recordName in dnsRecords:
+        if recordName.lower() == 'root':
+            recordName = ''
         recordId, recordIp = getRecordId(recordName, zoneId)
         if recordIp == wanIP:
             print(f'Record already set : {recordName} @ {recordIp} == {wanIP}')

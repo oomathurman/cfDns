@@ -4,4 +4,7 @@ ADD ./scripts /scripts
 
 ENV timer "*/5 * * * *"
 
-ENTRYPOINT /bin/sh -c "echo '$timer python /scripts/cfDns.py | crontab - && crond -fd8"
+RUN pip install requests &> /dev/null
+RUN pip install colorama &> /dev/null
+
+ENTRYPOINT /bin/sh -c "echo '$timer python /scripts/cfDns.py' | crontab - && crond -fd8"
