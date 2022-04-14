@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     environment:
       - domainName=
-      - dnsRecords="*", ""
+      - dnsRecords=root,*   # Use 'root' for '.domain.com'
       - apiEmail=
       - apiKey=
       - timer=*/5 * * * *
