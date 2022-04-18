@@ -1,6 +1,6 @@
 FROM python:alpine
 
-LABEL org.opencontainers.image.source https://github.com/oomathurman/cfdns
+LABEL org.opencontainers.image.source https://github.com/oomathurman/cfDns
 
 ADD ./scripts /scripts
 
