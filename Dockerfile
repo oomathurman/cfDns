@@ -1,5 +1,7 @@
 FROM python:alpine
 
+LABEL org.opencontainers.image.source https://github.com/oomathurman/cfdns
+
 ADD ./scripts /scripts
 
 RUN pip install requests &> /dev/null
