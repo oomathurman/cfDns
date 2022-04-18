@@ -17,6 +17,7 @@ services:
       - dnsRecords=root,*  # Use 'root' for '.domain.com'
       - apiEmail=
       - apiKey=
+      - logLevel=WARNING
       - timer=*/5 * * * *
 ```
 
@@ -31,5 +32,10 @@ services:
 	- your CloudFlare email
 - apiKey
 	- your CloudFlare api key
+- logLevel
+  - 'CRITICAL' - script crashing errors.
+  - 'WARNING' - Warnings, records match.
+  - 'INFO' - informational output
+  - 'DEBUG'
 - timer
 	- cron timer [Crontab.guru](https://crontab.guru/#*/5_*_*_*_*)

@@ -11,4 +11,5 @@ services:
       - dnsRecords=root,*   # Use 'root' for '.domain.com'
       - apiEmail=
       - apiKey=
-      - timer=*/5 * * * *
+      - logLevel=INFO
+      - cronTimer=*/5 * * * *
