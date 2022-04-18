@@ -12,5 +12,5 @@ services:
       - apiEmail=
       - apiKey=
       - logLevel=INFO
-      - cronTimer=*/5 * * * *
+      - cronTime=*/5 * * * *
       - TZ=
