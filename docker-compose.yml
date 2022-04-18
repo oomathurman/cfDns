@@ -13,3 +13,4 @@ services:
       - apiKey=
       - logLevel=INFO
       - cronTimer=*/5 * * * *
+      - TZ=

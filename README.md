@@ -19,6 +19,7 @@ services:
       - apiKey=
       - logLevel=WARNING
       - timer=*/5 * * * *
+      - TZ=
 ```
 
 ## Environment
@@ -39,3 +40,5 @@ services:
   - 'DEBUG'
 - timer
 	- cron timer [Crontab.guru](https://crontab.guru/#*/5_*_*_*_*)
+- TZ
+  - Set timezone for accurate logs
